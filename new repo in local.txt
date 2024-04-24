@@ -1,0 +1,56 @@
+vboxuser@MyUbuntu:~$ su
+Password: 
+root@MyUbuntu:/home/vboxuser# git config --global user.name "msvidya1992"
+root@MyUbuntu:/home/vboxuser# git config --global user.email "msvidya1992@gmail.com"
+root@MyUbuntu:/home/vboxuser# git init Mytest
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/vboxuser/Mytest/.git/
+root@MyUbuntu:/home/vboxuser# ls
+Desktop    Downloads  Mytest    Public  Srividya   Videos
+Documents  Music      Pictures  snap    Templates  Website
+root@MyUbuntu:/home/vboxuser# cd Mytest
+root@MyUbuntu:/home/vboxuser/Mytest# gedit hello.txt
+root@MyUbuntu:/home/vboxuser/Mytest# gedit hi.txt
+
+roott@MyUbuntu:/home/vboxuser/Mytest# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello.txt
+	hi.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@MyUbuntu:/home/vboxuser/Mytest# git add *
+root@MyUbuntu:/home/vboxuser/Mytest# git commit -m "two file are updated"
+[master (root-commit) 756d96d] two file are updated
+ 2 files changed, 2 insertions(+)
+ create mode 100644 hello.txt
+ create mode 100644 hi.txt
+root@MyUbuntu:/home/vboxuser/Mytest# git status
+On branch master
+nothing to commit, working tree clean
+root@MyUbuntu:/home/vboxuser/Mytest# git remote add origin https://github.com/msvidya1992/Mytest.git
+root@MyUbuntu:/home/vboxuser/Mytest# git push origin master
+Username for 'https://github.com': msvidya1992
+Password for 'https://msvidya1992@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 287 bytes | 41.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/msvidya1992/Mytest.git
+ * [new branch]      master -> master
+root@MyUbuntu:/home/vboxuser/Mytest# 
